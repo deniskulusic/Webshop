@@ -7,52 +7,6 @@ MenuOpenButton.addEventListener('click',function(){
    
 });
 
-
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-var Filters=document.querySelector(".filters");
-var FiltersToggle=document.querySelector(".filters-toggle");
-var FilterBackground=document.querySelector(".filter-background");
-FiltersToggle.addEventListener('click',function(){
-  Filters.classList.toggle("filter-active");
-  FilterBackground.classList.toggle("filter-active");
-  
-});
-FilterBackground.addEventListener('click',function(){
-  Filters.classList.toggle("filter-active");
-  FilterBackground.classList.toggle("filter-active");
-  
-});
-var SmallGrid=document.querySelector(".small-grid");
-var BigGrid=document.querySelector(".big-grid");
-var ShopGrid=document.querySelector(".shop-grid");
-BigGrid.addEventListener('click',function(){
-  ShopGrid.classList.add("shop-grid-big");
-  ShopGrid.classList.remove("shop-grid-small");
-  SmallGrid.classList.toggle("choose-active");
-  BigGrid.classList.toggle("choose-active");
-});
-SmallGrid.addEventListener('click',function(){
-  ShopGrid.classList.add("shop-grid-small");
-  ShopGrid.classList.remove("shop-grid-big");
-  SmallGrid.classList.toggle("choose-active");
-  BigGrid.classList.toggle("choose-active");
-});
-
-var leftItem = document.getElementById('item0');
-var rightItem = document.getElementById('item1');
 ;(function(){
 
   var throttle = function(type, name, obj){
@@ -72,15 +26,17 @@ var rightItem = document.getElementById('item1');
   throttle("scroll", "optimizedScroll");
 })();
 
-const elDistanceToTop =window.pageYOffset + rightItem.getBoundingClientRect().top;
-
-
+var FooterText = document.getElementById('item0');
+var Footer = document.getElementById('item1');
+const elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
 window.addEventListener("optimizedScroll", function(){
   if((elDistanceToTop - window.pageYOffset - 120) < 0){
     Nav.classList.add("nav-close");
   }
+  
   else{
     Nav.classList.remove("nav-close");
   }
-  leftItem.style.transform = "translateY(-" + 0.35*(elDistanceToTop - window.pageYOffset +100 ) + "px)";
+  console.log(elDistanceToTop , window.pageYOffset);
+  FooterText.style.transform = "translateY(-" + 0.35*(elDistanceToTop - window.pageYOffset +100 ) + "px)";
 })

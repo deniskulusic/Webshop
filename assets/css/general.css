@@ -399,6 +399,7 @@ nav .nav-icons {
 }
 
 footer {
+  position: relative;
   width: 100%;
   height: auto;
   background-color: #000;
