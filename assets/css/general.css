@@ -38,6 +38,7 @@ picture img {
 section {
   width: 100%;
   height: auto;
+  margin-top: 220px;
 }
 
 .grid {
@@ -588,8 +589,14 @@ ul {
     padding: 0;
     margin-bottom: 48px;
   }
+  section {
+    margin-top: 150px;
+  }
 }
 @media only screen and (max-width: 650px) {
+  section {
+    margin-top: 100px;
+  }
   .footer-main {
     grid-column: span 12;
   }

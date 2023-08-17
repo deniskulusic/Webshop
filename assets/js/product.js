@@ -28,7 +28,6 @@ ColorInput[j].addEventListener('click',function(){
 var Gallery=document.querySelector(".gallery");
 var GalleryBackground=document.querySelector(".naocale-background");
 var GalleryTriger=document.querySelectorAll(".naocale-background , .povecalo");
-console.log(GalleryTriger)
 for(j=0;j<GalleryTriger.length;j++){
     GalleryTriger[j].addEventListener('click',function(){
         GalleryBackground.classList.toggle("naocale-active");
@@ -37,4 +36,44 @@ for(j=0;j<GalleryTriger.length;j++){
         window.scrollTo(0, 0);
       });
     }
-
+    var MenuOpenButton=document.querySelector(".menu");
+    var Menu=document.querySelector(".menu-fullscreen");
+    var Nav=document.querySelector("nav");
+    MenuOpenButton.addEventListener('click',function(){
+        Menu.classList.toggle("menu-active");
+        Nav.classList.toggle("menu-active");
+       
+    });
+    
+    
+    
+    var FooterText = document.getElementById('item0');
+    var Footer = document.getElementById('item1');
+    var elDistanceToTop;
+    setTimeout(function(){
+        elDistanceToTop=window.pageYOffset + Footer.getBoundingClientRect().top;
+    },1000)
+    
+      var getScroll;
+      function Repeat(){
+        if((elDistanceToTop - getScroll -120) < 0){
+          Nav.classList.add("nav-close");
+        }
+        
+        else{
+          Nav.classList.remove("nav-close");
+        }
+        FooterText.style.transform = "translateY(-" + 0.35*(elDistanceToTop - getScroll +100 ) + "px)";
+        console.log(getScroll)
+      };
+    window.addEventListener("scroll",function(){
+      getScroll=this.pageYOffset;
+      
+      requestAnimationFrame(Repeat);
+    });
+    window.addEventListener("resize",function(){
+        getScroll=this.pageYOffset;
+        setTimeout(function(){
+            elDistanceToTop=window.pageYOffset + Footer.getBoundingClientRect().top;
+        },1000)
+      });

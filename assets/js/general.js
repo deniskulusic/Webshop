@@ -7,36 +7,26 @@ MenuOpenButton.addEventListener('click',function(){
    
 });
 
-;(function(){
 
-  var throttle = function(type, name, obj){
-    var obj = obj || window;
-    var running = false;
-    var func = function(){
-      if (running){ return; }
-      running = true;
-      requestAnimationFrame(function(){
-        obj.dispatchEvent(new CustomEvent(name));
-        running = false;
-      });
-    };
-    obj.addEventListener(type, func);
-  };
-  
-  throttle("scroll", "optimizedScroll");
-})();
 
 var FooterText = document.getElementById('item0');
 var Footer = document.getElementById('item1');
-const elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
-window.addEventListener("optimizedScroll", function(){
-  if((elDistanceToTop - window.pageYOffset - 120) < 0){
-    Nav.classList.add("nav-close");
-  }
+var elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
+
+  var getScroll;
+  function Repeat(){
+    if((elDistanceToTop - getScroll - 120) < 0){
+      Nav.classList.add("nav-close");
+    }
+    
+    else{
+      Nav.classList.remove("nav-close");
+    }
+    FooterText.style.transform = "translateY(-" + 0.35*(elDistanceToTop - getScroll +100 ) + "px)";
+    console.log(getScroll)
+  };
+window.addEventListener("scroll",function(){
+  getScroll=this.pageYOffset;
   
-  else{
-    Nav.classList.remove("nav-close");
-  }
-  console.log(elDistanceToTop , window.pageYOffset);
-  FooterText.style.transform = "translateY(-" + 0.35*(elDistanceToTop - window.pageYOffset +100 ) + "px)";
-})
+  requestAnimationFrame(Repeat);
+});

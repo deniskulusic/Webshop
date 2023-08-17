@@ -19,6 +19,7 @@ h3 {
 
 .wallpaper {
   z-index: -2;
+  margin-top: 0;
   position: sticky;
   height: 100vh;
   width: 100%;
@@ -63,7 +64,6 @@ h3 {
 
 .picture-display-naslov {
   grid-column: span 2;
-  margin-top: 110px;
   margin-bottom: 168px;
 }
 
@@ -121,7 +121,6 @@ h3 {
   width: 100%;
   position: relative;
   transition: 0.5s;
-  margin-top: 160px;
 }
 
 .shop-grid {
@@ -218,9 +217,6 @@ h3 {
   fill: #000;
 }
 
-.two-img-grid {
-  margin-top: 220px;
-}
 .two-img-grid .maxw {
   max-width: 2000px;
 }
@@ -285,7 +281,6 @@ h3 {
 
 .gallery-i {
   display: flex;
-  margin-top: 220px;
 }
 
 .gallery-large-i {
@@ -352,6 +347,7 @@ h3 {
 }
 
 .newsletter {
+  margin-top: 0;
   padding-top: 180px;
   padding-bottom: 180px;
 }
@@ -412,9 +408,6 @@ footer {
   margin-top: 0;
 }
 
-.details {
-  margin-top: 200px;
-}
 .details .maxw {
   max-width: 1200px;
   display: flex;
@@ -457,4 +450,265 @@ footer {
   transition: 0.5s;
   background-color: #fff;
   position: relative;
+}
+
+.big-img-grid-wrapper {
+  grid-column: span 6;
+}
+
+.small-img-grid-wrapper {
+  grid-column: span 3;
+}
+
+.small-img-grid-wrapper h4, .big-img-grid-wrapper h4 {
+  font-family: "Ashbury", sans-serif;
+  font-size: 1.625rem;
+  line-height: 1.8rem;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  color: #313942;
+}
+.small-img-grid-wrapper p, .big-img-grid-wrapper p {
+  font-family: "Graphik", sans-serif;
+  font-weight: 500;
+  margin-top: -0.03em;
+  margin-bottom: 0.03em;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
+  color: #8D9092;
+}
+
+.big-img-grid-holder {
+  padding-top: 72%;
+}
+
+.small-img-grid-holder {
+  padding-top: 149.59%;
+}
+
+.small-img-grid-holder, .big-img-grid-holder {
+  position: relative;
+}
+
+.small-img-grid-wrapper:hover .two-img-grid-background, .big-img-grid-wrapper:hover .two-img-grid-background {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.small-img-grid-wrapper:hover .first-arrow, .big-img-grid-wrapper:hover .first-arrow {
+  left: 50%;
+}
+.small-img-grid-wrapper:hover .second-arrow, .big-img-grid-wrapper:hover .second-arrow {
+  left: 150%;
+}
+.small-img-grid-wrapper:hover .c-hoz-arrow, .big-img-grid-wrapper:hover .c-hoz-arrow {
+  border: 1px solid #999B9D;
+}
+
+.c-hoz-arrow {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  text-indent: -9999px;
+  transition: border-color 400ms;
+  overflow: hidden;
+}
+
+.c-hoz-arrow {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 2.875rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  overflow: clip;
+  border: 1px solid #E1DFDB;
+  transition: 0.6s;
+}
+.c-hoz-arrow svg {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  transition: 0.6s;
+}
+
+.first-arrow {
+  left: -100%;
+}
+
+.second-arrow {
+  left: 50%;
+}
+
+.arrow-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  margin-bottom: 4px;
+}
+
+@media only screen and (max-width: 1150px) {
+  .wallpaper-naslov h1 {
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 143px;
+  }
+  .wallpaper-naslov .big {
+    font-size: 150px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .wallpaper-naslov h1 {
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120px;
+  }
+  .wallpaper-naslov .big {
+    font-size: 120px;
+  }
+  .picture-display-1-wrapper {
+    width: 100%;
+    margin-left: 0;
+    position: relative;
+  }
+  .picture-display .grid {
+    -moz-column-gap: 60px;
+    column-gap: 60px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .picture-display-1 h3 {
+    width: 100%;
+    margin-bottom: 45px;
+  }
+  .picture-display-2 p {
+    margin-top: 45px;
+    margin-left: 0px;
+    width: 100%;
+  }
+  .newsletter {
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
+  .newsletter h1 {
+    grid-column: span 12;
+    font-size: 59.81px;
+  }
+  .newsletter-input {
+    grid-column: span 12;
+    margin-top: 24px;
+  }
+  .big-img-grid-wrapper {
+    grid-column: span 12;
+    margin-bottom: 24px;
+  }
+  .big-img-grid-holder {
+    padding-top: 50%;
+  }
+  .small-img-grid-wrapper {
+    grid-column: span 6;
+  }
+  .small-img-grid-holder {
+    padding-top: 100%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .picture-display-1 {
+    margin-bottom: 32px;
+  }
+  .small-img-grid-wrapper {
+    grid-column: span 12;
+    margin-bottom: 24px;
+  }
+  .small-img-grid-holder {
+    padding-top: 50%;
+  }
+  .wallpaper {
+    padding-top: 60px;
+  }
+  .wallpaper-naslov h1 {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 72px;
+  }
+  .wallpaper-naslov .big {
+    font-size: 72px;
+  }
+  .picture-display-naslov {
+    display: none;
+  }
+  .details .maxw {
+    row-gap: 64px;
+    flex-direction: column;
+  }
+  .picture-display-2 {
+    grid-column: span 2;
+  }
+  .picture-display-1 {
+    grid-column: span 2;
+  }
+  .two-img-grid-wrapper {
+    grid-column: span 12;
+  }
+  .two-img-grid .container {
+    gap: 24px;
+  }
+  .selection {
+    padding-left: 0;
+    display: flex;
+    overflow: auto;
+  }
+  .shop-element {
+    min-width: 200px;
+    border: 0;
+  }
+  .shop-element:nth-child(3) {
+    border-top: none !important;
+  }
+  .shop-element {
+    padding-top: 0;
+    padding-bottom: 24px;
+  }
+  .newsletter {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .newsletter h1 {
+    grid-column: span 12;
+    font-size: 40.81px;
+  }
+  .newsletter svg {
+    display: none;
+  }
+  .gallery-i {
+    flex-direction: column;
+  }
+  .gallery-large-i {
+    width: 100%;
+  }
+  .gallery-small-i {
+    width: 100%;
+  }
+  .gallery-small-element-i {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .two-img-grid-holder {
+    padding-top: 100%;
+  }
+  .small-img-grid-holder, .big-img-grid-holder {
+    padding-top: 140%;
+  }
+  .picture-display-1 h3 {
+    margin-bottom: 32px;
+  }
+  .picture-display-2 p {
+    margin-top: 32px;
+  }
 }/*# sourceMappingURL=naocale.css.map */

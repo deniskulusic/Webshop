@@ -412,7 +412,6 @@ body.naocale-active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 180px;
 }
 .preporuceni-proizvodi h1 {
   font-size: 40px;
@@ -433,7 +432,6 @@ body.naocale-active {
   background-color: #000;
   padding-top: 120px;
   padding-bottom: 120px;
-  margin-top: 64px;
 }
 .search .container {
   position: relative;
@@ -519,6 +517,7 @@ body.naocale-active {
   }
 }
 .newsletter {
+  margin-top: 0;
   padding-top: 180px;
   padding-bottom: 180px;
 }
@@ -592,9 +591,6 @@ footer {
     grid-column: span 12;
     margin-top: 24px;
   }
-  .preporuceni-proizvodi {
-    margin-top: 100px;
-  }
   .preporuceni-proizvodi p {
     width: 100%;
   }
@@ -616,9 +612,6 @@ footer {
     grid-column: span 12;
     margin-bottom: 24px;
   }
-  .product-details div:nth-child(2) {
-    margin-bottom: 36px;
-  }
   .gallery-cell {
     width: 90%;
   }
@@ -627,9 +620,6 @@ footer {
   }
   .flickity-prev-next-button {
     display: none;
-  }
-  .preporuceni-proizvodi {
-    margin-top: 64px;
   }
   .preporuceni-proizvodi h1 {
     text-align: center;

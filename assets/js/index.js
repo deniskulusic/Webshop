@@ -44,22 +44,17 @@ var elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
   var Item3 = document.getElementById('item3');
   var Item4 = document.getElementById('item4');
   var Item5 = document.getElementById('item5');
-  var Item6 = document.getElementById('item6');
   var Item7 = document.getElementById('item7');
-  var Item8 = document.getElementById('item8');
-  var Item91 = document.getElementById('item91');
-  var Item92 = document.getElementById('item92');
-  var Item93 = document.getElementById('item93');
-  var Item101 = document.getElementById('item101');
-  var Item102 = document.getElementById('item102');
-  var Item103 = document.getElementById('item103');
+  var Item81 = document.getElementById('item81');
+  var Item82 = document.getElementById('item82');
+
   var Item2FromTop =window.pageYOffset + Item2.getBoundingClientRect().top;
   var Item3FromTop =window.pageYOffset + Item3.getBoundingClientRect().top;
-  var Item6FromTop =window.pageYOffset + Item6.getBoundingClientRect().top;
+  var Item4FromTop =window.pageYOffset + Item4.getBoundingClientRect().top;
+  var Item5FromTop =window.pageYOffset + Item5.getBoundingClientRect().top;
   var Item7FromTop =window.pageYOffset + Item7.getBoundingClientRect().top;
-  var Item8FromTop =window.pageYOffset + Item8.getBoundingClientRect().top;
-  var Item9FromTop =window.pageYOffset + Item91.getBoundingClientRect().top;
-  var Item10FromTop =window.pageYOffset + Item101.getBoundingClientRect().top;
+  var Item81FromTop =window.pageYOffset + Item81.getBoundingClientRect().top;
+  var Item82FromTop =window.pageYOffset + Item82.getBoundingClientRect().top;
   var getScroll;
   function Repeat(){
     if((elDistanceToTop - getScroll - 120) < 0){
@@ -116,17 +111,43 @@ var elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
       },{duration:1200,fill:"forwards"})
     }
   }
-    Item4.animate({
-      transform : "translateY(-" + 1*(getScroll) + "px)"
-    },{duration:0,fill:"forwards"})
-    Item5.style.transform = "translateY(-" + 0.5*(getScroll) + "px)";
+  if(screen.width>1150){
+    Item81.animate({
+        transform : "translateY(" + 0.1*(Item81FromTop - getScroll -100) + "px)"
+      },{duration:1200,fill:"forwards"})
+      Item82.animate({
+        transform : "translateY(-" + 0.1*(Item82FromTop - getScroll -100) + "px)"
+      },{duration:1200,fill:"forwards"})
+  }
+  else{
+    if(0<Item81FromTop - window.pageYOffset - 500){
+        Item81.animate({
+          transform : "translateY(" + 0.2*(Item81FromTop - getScroll - 500) + "px)"
+        },{duration:1200,fill:"forwards"})
+        
+      }
+      else{
+        Item81.animate({
+          transform : "translateY(" + 0 + "px)"
+        },{duration:1200,fill:"forwards"})
+      }
+      if(0<Item82FromTop - window.pageYOffset - 500){
+        Item82.animate({
+          transform : "translateY(" + 0.2*(Item82FromTop - getScroll - 500) + "px)"
+        },{duration:1200,fill:"forwards"})
+        
+      }
+      else{
+        Item82.animate({
+          transform : "translateY(" + 0 + "px)"
+        },{duration:1200,fill:"forwards"})
+      }
+  }
     FooterText.style.transform = "translateY(-" + 0.35*(elDistanceToTop - getScroll +100 ) + "px)";
     
-    Move(Item6 , Item6FromTop);
+    Move(Item4 , Item4FromTop);
+    Move(Item5 , Item5FromTop);
     Move(Item7 , Item7FromTop);
-    Move(Item8 , Item8FromTop);
-    Move3(Item91,Item92, Item93 , Item9FromTop );
-    Move3(Item101,Item102, Item103 , Item10FromTop );
   };
   window.addEventListener("scroll",function(){
     getScroll=this.pageYOffset;
@@ -136,11 +157,9 @@ var elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
     getScroll=this.pageYOffset;
     Item2FromTop =window.pageYOffset + Item2.getBoundingClientRect().top;
   Item3FromTop =window.pageYOffset + Item3.getBoundingClientRect().top;
-  Item6FromTop =window.pageYOffset + Item6.getBoundingClientRect().top;
+  Item4FromTop =window.pageYOffset + Item4.getBoundingClientRect().top;
+  Item5FromTop =window.pageYOffset + Item5.getBoundingClientRect().top;
   Item7FromTop =window.pageYOffset + Item7.getBoundingClientRect().top;
-  Item8FromTop =window.pageYOffset + Item8.getBoundingClientRect().top;
-  Item9FromTop =window.pageYOffset + Item91.getBoundingClientRect().top;
-  Item10FromTop =window.pageYOffset + Item101.getBoundingClientRect().top;
   elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
   });
 

@@ -43,6 +43,7 @@ var elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
   var Item2 = document.getElementById('item2');
   var Item3 = document.getElementById('item3');
   var Item4 = document.getElementById('item4');
+  var Item41 = document.getElementById('item41');
   var Item5 = document.getElementById('item5');
   var Item6 = document.getElementById('item6');
   var Item7 = document.getElementById('item7');
@@ -53,8 +54,6 @@ var elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
   var Item101 = document.getElementById('item101');
   var Item102 = document.getElementById('item102');
   var Item103 = document.getElementById('item103');
-  var Item2FromTop =window.pageYOffset + Item2.getBoundingClientRect().top;
-  var Item3FromTop =window.pageYOffset + Item3.getBoundingClientRect().top;
   var Item6FromTop =window.pageYOffset + Item6.getBoundingClientRect().top;
   var Item7FromTop =window.pageYOffset + Item7.getBoundingClientRect().top;
   var Item8FromTop =window.pageYOffset + Item8.getBoundingClientRect().top;
@@ -84,41 +83,8 @@ var elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
     },{duration:1200,fill:"forwards"})
     */
     
-    if(screen.width>650){
-    Item3.animate({
-      transform : "translateY(-" + 0.1*(Item3FromTop - getScroll -100) + "px)"
-    },{duration:1200,fill:"forwards"})
-    Item2.animate({
-      transform : "translateY(" + 0.1*(Item2FromTop - getScroll -100) + "px)"
-    },{duration:1200,fill:"forwards"})
-  }
-  else{
-    if(0<Item3FromTop - window.pageYOffset - 500){
-      Item3.animate({
-        transform : "translateY(" + 0.2*(Item3FromTop - getScroll - 500) + "px)"
-      },{duration:1200,fill:"forwards"})
-      
-    }
-    else{
-      Item3.animate({
-        transform : "translateY(" + 0 + "px)"
-      },{duration:1200,fill:"forwards"})
-    }
-    if(0<Item2FromTop - window.pageYOffset - 500){
-      Item2.animate({
-        transform : "translateY(" + 0.2*(Item2FromTop - getScroll - 500) + "px)"
-      },{duration:1200,fill:"forwards"})
-      
-    }
-    else{
-      Item2.animate({
-        transform : "translateY(" + 0 + "px)"
-      },{duration:1200,fill:"forwards"})
-    }
-  }
-    Item4.animate({
-      transform : "translateY(-" + 1*(getScroll) + "px)"
-    },{duration:0,fill:"forwards"})
+    Item4.style.transform = "translateY(calc(-50% - " + 0.7*(getScroll) + "px))";
+    Item41.style.transform = "translateY(calc(-50% - " + 0.7*(getScroll) + "px))";
     Item5.style.transform = "translateY(-" + 0.5*(getScroll) + "px)";
     FooterText.style.transform = "translateY(-" + 0.35*(elDistanceToTop - getScroll +100 ) + "px)";
     
@@ -134,8 +100,6 @@ var elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
   });
   window.addEventListener("resize",function(){
     getScroll=this.pageYOffset;
-    Item2FromTop =window.pageYOffset + Item2.getBoundingClientRect().top;
-  Item3FromTop =window.pageYOffset + Item3.getBoundingClientRect().top;
   Item6FromTop =window.pageYOffset + Item6.getBoundingClientRect().top;
   Item7FromTop =window.pageYOffset + Item7.getBoundingClientRect().top;
   Item8FromTop =window.pageYOffset + Item8.getBoundingClientRect().top;
@@ -144,7 +108,7 @@ var elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
   elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
   });
 
-  function Move(Item , ItemFromTop){
+  function Move(Item , ItemFromTop  ){
     IfElse(500, 0.2, Item , ItemFromTop)
   }
   function Move3(Item1,Item2,Item3 , ItemFromTop  ){

@@ -1,4 +1,9 @@
+.paralax{
+  transition: 0.5s;
+  background-color: #fff;
+  position: relative;
 
+}
 .wallpaper{
     margin-top: 119px;
     position: relative;
@@ -18,8 +23,16 @@
 .wallpaper-holder{
   padding-top: 30%;
 }
+.results-sec{
+  margin-top: 0;
+}
+.shop-sec{
+  margin-top: 0;
+}
 .results{
+  
   position: relative;
+
     display: flex;
     border-bottom: #e0e0e0 1px solid;
     justify-content: space-between;
@@ -295,7 +308,7 @@ input[type="range"] {
   }
   .gallery-i{
     display: flex;
-    
+    margin-top: 0;
   }
   .gallery-large-i{
     width: 40%;
@@ -365,7 +378,7 @@ input[type="range"] {
     background-color: #000;
     padding-top: 120px;
     padding-bottom: 120px;
-    margin-top: 225px;
+    z-index: 2;
     .container{
       position: relative;
     }
@@ -604,7 +617,6 @@ text-transform: uppercase;
   .search{
     padding-bottom: 100px;
     padding-top: 100px;
-    margin-top: 114px;
     input{
       font-size: 20px;
       line-height: 24px;
@@ -614,6 +626,7 @@ text-transform: uppercase;
     display: none;
   }
   .gallery-i{
+
     flex-direction: column;
   }
   .gallery-large-i{

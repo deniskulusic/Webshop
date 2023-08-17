@@ -1,0 +1,506 @@
+h2{
+    color: #2A2826;
+    text-align: center;
+    font-family: Inter;
+    font-size: 47.008px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 59.858px;
+  }
+  h3{
+    color: #2A2826;
+font-family: Inter;
+font-size: 46.008px;
+font-style: normal;
+font-weight: 300;
+line-height: 59.858px;
+  }
+  h4{
+    color: #2A2826;
+text-align: center;
+font-family: Inter;
+font-size: 16.008px;
+font-style: normal;
+font-weight: 300;
+line-height: 28.018px;
+  }
+   h5{
+    color: #2A2826;
+font-family: Inter;
+font-size: 30.008px;
+font-style: normal;
+font-weight: 300;
+line-height: 38.019px;
+   }
+      .wallpaper{
+        z-index: -2;
+        margin-top: 0;
+        
+        
+        position: sticky;
+        height: 100vh;
+        width: 100%;
+        top:0;
+        overflow: hidden;
+        padding-top: 119px;
+        box-sizing: border-box;
+        img{
+            height: 100%;
+            width: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+        
+    }
+      .wallpaper-naslov{
+        position: absolute;
+        left: 12px;
+        bottom:12px;
+
+        h1{
+            text-transform: uppercase;
+            color: #FFF;
+            font-family: Inter;
+            font-size: 140px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 193px;
+        }
+        .big{
+            font-size: 190px;
+        }
+      }
+      .picture-display{
+        .maxw{
+            max-width: 1280px;
+        }
+        .grid{
+            column-gap: 140px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      .picture-display-naslov{
+        grid-column: span 12;
+        margin-bottom: 86px;
+      }
+      .picture-display-1{
+        grid-column: span 1;
+        h3{
+            width:  79%;
+            margin-bottom: 75px;
+        }
+        }
+        .picture-display-2{
+            grid-column: span 1;
+            p{
+            color: #696866;
+            font-family: Open Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28.8px;
+            margin-top: 110px;
+            margin-left: 19px;
+            width: 98%;
+            }
+        }
+        .picture-display-1-wrapper{
+            width: 68%;
+            margin-left: 32%;
+            position: relative;
+        }
+        .picture-display-1-holder{
+            padding-top: 138%;
+            position: relative;
+        }
+        .picture-display-2-wrapper{
+            width: 100%;
+            position: relative;
+        }
+        .picture-display-2-holder{
+            padding-top: 121%;
+            position: relative;
+        }
+        .two-img-grid-wrapper{
+            grid-column: span 6;
+        }
+        .two-img-grid-holder{
+            position: relative;
+            padding-top: 52%;
+            picture{
+                overflow: hidden;
+                img{
+                    transition: 1s;
+                    transform: scale(1);
+                    -webkit-transform:scale(1) ;
+                }}
+        }
+        .two-img-grid-holder:hover{
+            picture{
+            
+                img{
+                    transform: scale(1.1);
+                    -webkit-transform:scale(1.1) ;
+                }}
+                .two-img-grid-background{
+          
+                    background-color: rgba($color: #000000, $alpha: 0.5);
+                   
+                  }
+        }
+        .two-img-grid-background{
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: 1s;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            p{
+                text-transform: uppercase;
+                color: #FFF;
+                text-align: center;
+                font-family: Inter;
+                font-size: 26.25px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 45.5px;
+            }
+          }
+          .newsletter{
+            margin-top: 0;
+            padding-top: 180px;
+            padding-bottom: 180px;
+            h1{
+              grid-column: span 5;
+              color: #161A14;
+          font-family: Inter;
+          font-size: 59.81px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: uppercase;
+            }
+            p{
+              color: #161A14;
+          font-family: Inter;
+          font-size: 17.12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 31.445px;
+            }
+          }
+          .newsletter-input{
+            grid-column: 7/span 5;
+            position: relative;
+            input{
+              height: 90px;
+              width: 100%;
+              border-bottom: 1px solid #D9D9D9;
+              margin-top: 24px;
+              padding-left: 8px;
+              position: relative;
+              color: #161A14;
+          font-family: Inter;
+          font-size: 14.773px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          z-index: 2;
+            }
+            input::placeholder {
+              color: #CCC;
+              opacity: 1;
+            }
+            svg{
+              position: absolute;
+              right: -40px;
+              bottom: -25px;
+              z-index: 1;
+            }
+          }
+          footer{
+            margin-top: 0;
+          }
+          .paralax{
+            transition: 0.5s;
+            background-color: #fff;
+            position: relative;
+    
+        }
+        .partners{
+            text-align: center;
+            h4{
+                margin-bottom: 64px;
+            }
+            div{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 48px;
+                img{
+                    height: 94px;
+                    opacity: 0.2;
+                }
+            }
+        }
+        .play{
+            position: relative;
+            max-height: 700px;
+            overflow: hidden;
+        }
+        .play-holder{
+          padding-top: 35%;
+        }
+        .play-circle{
+            position: absolute;
+            left:50%;
+            top:50%;
+            z-index: 2;
+            transform: translateX(-50%) translateY(-50%);
+            display: flex;
+width: 101px;
+height: 101px;
+justify-content: center;
+align-items: center;
+border-radius: 50px;
+border: 2px solid #FFF;
+color: rgba(255, 255, 255, 0.90);
+text-align: center;
+font-family: Open Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 100px; /* 714.286% */
+letter-spacing: 2px;
+transition: 0.5s;
+        }
+        .play:hover{
+            .play-circle{
+                background-color: rgba($color: #fff, $alpha: 0.3);
+            }
+        }
+        .radno-vrijeme{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            p{
+                color: #696866;
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28.8px;  
+                margin-top: 10px;      
+            }
+            button{
+                border: 2px solid #FFF;
+                padding: 11px 47.27px 13px 44px;
+                color: white;
+                margin-top: 30px;
+            }
+            button:hover{
+                background: rgba($color: #fff, $alpha: 0.2);
+            }
+        }
+        .radno-vijeme-wrapper{
+            width: 42%;
+            position: relative;
+            
+        }
+        .radno-vrijeme-holder{
+            position: relative;
+            padding-top: 100%;
+        }
+        .radno-vrijeme-1{
+            z-index: 2;
+            position:relative;
+            width: 404px;
+            background: #FAF8F6;
+            box-sizing: border-box;
+            padding: 70px 60px;
+            height: fit-content;
+            align-self: flex-end;
+            margin-right: -60px;
+            margin-bottom: -40px;
+        }
+        .radno-vrijeme-2{
+            margin-left: -60px;
+            margin-top: 80px;
+            height: fit-content;
+            box-sizing: border-box;
+            position:relative;
+            width: 404px;
+            bottom: 0;
+            background: #959793;
+            z-index: 2;
+            padding: 70px 60px;
+            h5{
+                color: white;
+            }
+            p{
+                color: white;
+            }
+        }
+        @media only screen and (max-width: 1150px) {
+            .radno-vrijeme{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .radno-vijeme-wrapper{
+                
+                width: 80%;
+            }
+            .radno-vrijeme-holder{
+                padding-top: 50%;
+            }
+            .radno-vrijeme-1{
+                margin: 0;
+                width: 70%;
+                align-self: center;
+            }
+            .radno-vrijeme-2{
+                margin: 0;
+                width: 70%;
+            }
+          }
+          @media only screen and (max-width: 950px) {
+            .picture-display-1-wrapper {
+                width: 100%;
+                margin-left: 0;
+                position: relative;
+              }
+              .picture-display .grid {
+                -moz-column-gap: 60px;
+                column-gap: 60px;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+              }
+              .picture-display-1 h3 {
+                width: 100%;
+                margin-bottom: 45px;
+              }
+              .picture-display-2 p {
+                margin-top: 45px;
+                margin-left: 0px;
+                width: 100%;
+              }
+            .newsletter{
+              padding-top: 180px;
+              padding-bottom: 180px;
+              h1{
+                grid-column: span 12;
+                font-size: 59.81px;
+              }
+              
+            }
+            .newsletter-input{
+              grid-column: span 12;
+              margin-top: 24px;
+            }
+          }
+          @media only screen and (max-width: 650px) {
+            .picture-display-1 {
+        
+                margin-bottom: 32px;
+              }
+              .picture-display-2 {
+                grid-column: span 2;
+              }
+              .picture-display-1 {
+                grid-column: span 2;
+              }
+              .two-img-grid-wrapper{
+                grid-column:span 12;
+                
+            }
+            .two-img-grid .container {
+              gap:24px;
+            }
+            .newsletter{
+                padding-top: 100px;
+                padding-bottom: 100px;
+                h1{
+                  grid-column: span 12;
+                  font-size: 40.81px;
+                }
+                svg{
+                  display: none;
+                }
+              }
+            .partners{
+                
+                div{
+                   
+                    gap: 24px;
+                    img{
+                        height: 70px;
+                        opacity: 0.2;
+                    }
+                }
+            }
+            .play-holder{
+                padding-top: 70%;
+            }
+            h2{
+                
+                font-size: 32.008px;
+                
+                line-height: 40.858px;
+                
+              }
+              .picture-display-naslov{
+                margin-bottom: 24px;
+              }
+          }
+          @media only screen and (max-width: 450px) {
+            .two-img-grid-holder {
+                padding-top: 100%;
+              }
+              .picture-display-1 h3 {
+      
+                margin-bottom: 32px;
+              }
+              .picture-display-2 p {
+                margin-top: 32px;
+                
+              }
+            .partners{
+                h4{
+                    margin-bottom: 48px;
+                }
+                div{
+                   
+                    gap: 14px;
+                    
+                }
+            }
+            .play-holder{
+                padding-top: 140%;
+            }
+            .radno-vijeme-wrapper{
+                
+                width: 100%;
+            }
+            .radno-vrijeme-holder{
+                padding-top: 100%;
+            }
+            .radno-vrijeme-1{
+                margin: 0;
+                width: 100%;
+                align-self: center;
+                padding: 40px 30px;
+
+            }
+            .radno-vrijeme-2{
+                margin: 0;
+                width: 100%;
+                padding: 40px 30px;
+            }
+          }
