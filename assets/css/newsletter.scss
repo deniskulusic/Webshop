@@ -1,0 +1,57 @@
+.wallpaper{
+    z-index: -2;
+    margin-top: 0;
+    
+    
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    top:0;
+    overflow: hidden;
+    padding-top: 119px;
+    box-sizing: border-box;
+    img{
+        height: 100%;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    .newsletter{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        background-color: white;
+        display: flex;
+        padding: 26.98px 35.19px 26.99px 35.18px;
+        align-items: center;
+        gap: 28.81px;
+        svg{
+            width: 64.53px;
+            height: 64.54px;
+        }
+    }
+}
+h5{
+    color: #000;
+font-family: Inter;
+font-size: 17.12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 1.056px;
+text-transform: uppercase;
+}
+p{
+    color: #000;
+font-family: Inter;
+font-size: 14.773px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+@media only screen and (max-width: 650px) {
+    .wallpaper{
+        padding-top: 60px;
+    }
+}

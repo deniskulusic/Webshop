@@ -184,6 +184,7 @@ a:hover{
 .maxw{
   margin-top: 100px;
   max-width: 1400px;
+  width: 1400px;
 }
 }
 .menu-fullscreen::before {
@@ -207,7 +208,8 @@ a:hover{
   transition:transform 1s ease-out 0s, height 0s linear 0s;
 }
 .menu-active.menu-fullscreen{
-  display: block;
+  display: flex;
+  align-items: center;
 opacity: 1;
 height: calc(100vh - 119px);
 transition: opacity 0.5s , height 0s linear 0s;
@@ -511,6 +513,7 @@ margin-left: 80px;
         font-weight: 400;
         line-height: 18.773px; /* 119.02% */
         letter-spacing: 0.587px; 
+        margin-right: 10px;
     }
 
     input[type=radio]:checked+label ,.dash {
@@ -528,7 +531,13 @@ line-height: normal;
 letter-spacing: 1.314px; 
 text-transform: uppercase;
   }
-  
+  @media only screen and (max-width: 1400px) {
+    .menu-fullscreen{
+      .maxw{
+        width: auto;
+      }
+    }
+  }
   @media only screen and (max-width: 1150px) {
     footer{
       padding-top: 148px;
@@ -552,6 +561,11 @@ text-transform: uppercase;
     }
   }
   @media only screen and (max-width: 950px) {
+    .menu-active.menu-fullscreen{
+      display: block;
+      
+    }
+    
     .footer-side{
       flex-direction: column;
       width: 100%;
@@ -599,10 +613,46 @@ text-transform: uppercase;
       margin-top: 100px;
     }
     .footer-main{
-      grid-column: span 12;
+      grid-column: span 6;
     }
     .footer-info{
-      grid-column: span 12;
+      grid-column: span 6;
+      a{
+        line-height: 30.2px;
+        font-size: 14px;
+      }
+      font-size: 12px;
+      line-height: 19.2px;
+    }
+    .footer-img{
+      img{
+        width: 100px;
+        height: auto;
+      }
+      margin-bottom: 80px;
+    }
+    .footer-made{
+      margin-top: 64px;
+    }
+    .footer-side{
+     
+      a{
+        line-height: 30.2px;
+        font-size: 14px;
+      }
+      
+      line-height: 19.2px;
+    }
+    footer{
+      a{
+        font-size:14px;
+        line-height: 30.2333px;
+        letter-spacing: 1.28px;
+        
+      }
+      .grid{
+        column-gap: 30px;
+      }
     }
     .grid {
       display: grid;
@@ -617,9 +667,6 @@ text-transform: uppercase;
     .footer-bottom{
       margin-top: 58px;
       padding-top: 58px;
-    }
-    .footer-info{
-      margin-top: 48px;
     }
     nav{
       height: 60px;
