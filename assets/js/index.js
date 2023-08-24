@@ -43,6 +43,7 @@ var elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
   var Item2 = document.getElementById('item2');
   var Item3 = document.getElementById('item3');
   var Item4 = document.getElementById('item4');
+  var Item41 = document.getElementById('item41');
   var Item5 = document.getElementById('item5');
   var Item7 = document.getElementById('item7');
   var Item81 = document.getElementById('item81');
@@ -78,7 +79,7 @@ var elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
       transform : "translateY(-" + 0.5*(getScroll) + "px)"
     },{duration:1200,fill:"forwards"})
     */
-    
+    Item41.style.transform = "translateY(calc(-50% - " + 0.7*(getScroll) + "px))";
     if(screen.width>650){
     Item3.animate({
       transform : "translateY(-" + 0.1*(Item3FromTop - getScroll -100) + "px)"

@@ -314,6 +314,7 @@ input[type=checkbox]:checked::before {
 
 .try-on {
   cursor: pointer;
+  display: none;
 }
 .try-on svg {
   width: 83px;

@@ -664,9 +664,17 @@ footer {
     position: absolute;
     right: 10%;
     top: -180px;
-    width: 24px;
-    height: 24px;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-radius: 100%;
     background-color: #e0e0e0;
+  }
+  .povecalo img {
+    height: 24px;
+    width: auto;
   }
 }
 @media only screen and (max-width: 450px) {

@@ -404,12 +404,15 @@ nav .nav-icons {
 footer {
   position: relative;
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   background-color: #000;
   margin-top: 225px;
   padding-top: 234px;
   padding-bottom: 220px;
   overflow: clip;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
 footer a {
   color: #D9D9D9;
@@ -485,7 +488,15 @@ ul {
 }
 .footer-side ul {
   display: flex;
-  gap: 50px;
+  gap: 40px;
+  margin-right: 40px;
+}
+.footer-side ul li {
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  inline-size: -moz-max-content;
+  inline-size: max-content;
 }
 .footer-side a {
   font-family: "Inter";
@@ -608,11 +619,37 @@ ul {
   section {
     margin-top: 100px;
   }
+  .menu-main a {
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .menu-bottom {
+    margin-top: 80px;
+  }
+  .menu-fullscreen .maxw {
+    margin-top: 80px;
+  }
+  .menu-fullscreen .socials {
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: auto;
+  }
+  .menu-fullscreen .footer-side .footer-lng {
+    top: -73px;
+  }
+  .footer-lng {
+    position: absolute;
+    right: 0;
+  }
   .footer-main {
     grid-column: span 6;
+    gap: 18px;
   }
   .footer-info {
     grid-column: span 6;
+    justify-content: flex-end;
+    position: relative;
     font-size: 12px;
     line-height: 19.2px;
   }
@@ -620,22 +657,39 @@ ul {
     line-height: 30.2px;
     font-size: 14px;
   }
+  .socials {
+    display: flex;
+    gap: 20px;
+    padding-left: 0;
+    position: absolute;
+    left: calc(-100% - 30px);
+    bottom: -146px;
+  }
   .footer-img {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
   .footer-img img {
     width: 100px;
     height: auto;
   }
   .footer-made {
-    margin-top: 64px;
+    margin-top: 24px;
+    float: right;
   }
   .footer-side {
+    position: relative;
     line-height: 19.2px;
   }
   .footer-side a {
     line-height: 30.2px;
     font-size: 14px;
+  }
+  .footer-side .footer-lng {
+    top: -60px;
+  }
+  footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   footer a {
     font-size: 14px;
@@ -658,13 +712,13 @@ ul {
   }
   .footer-bottom {
     margin-top: 58px;
-    padding-top: 58px;
+    padding-top: 118px;
   }
   nav {
     height: 60px;
   }
   .logo img {
-    height: 50px;
+    height: 45px;
     width: auto;
   }
   .menu-fullscreen {
