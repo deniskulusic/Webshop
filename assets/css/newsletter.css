@@ -15,8 +15,9 @@
   -o-object-fit: cover;
   object-fit: cover;
 }
-.wallpaper .newsletter {
-  position: absolute;
+
+.newsletter-corner {
+  position: fixed;
   right: 0;
   bottom: 0;
   box-sizing: border-box;
@@ -26,7 +27,7 @@
   align-items: center;
   gap: 28.81px;
 }
-.wallpaper .newsletter svg {
+.newsletter-corner svg {
   width: 64.53px;
   height: 64.54px;
 }
@@ -58,6 +59,11 @@ p {
   height: 100vh;
   left: 0;
   top: 0;
+  display: none;
+}
+
+.newsletter-popup-active {
+  display: block;
 }
 
 .newsletter-popup-background {
@@ -72,12 +78,12 @@ p {
 
 .newsletter-popup-content {
   position: relative;
-  width: 51.944vw;
+  width: 900px;
   top: 50%;
   right: 0;
   left: 0;
   margin: 0 auto;
-  padding: 12rem 8.6rem;
+  padding: 10rem 8.6rem;
   background-color: #f1f2ed;
   transform: translateY(-50%);
   box-sizing: border-box;
@@ -137,8 +143,30 @@ p {
   z-index: 1;
 }
 
+@media only screen and (max-width: 950px) {
+  .newsletter-popup-content {
+    width: 90vw;
+    padding: 9rem 6.6rem;
+  }
+}
 @media only screen and (max-width: 650px) {
   .wallpaper {
     padding-top: 60px;
+  }
+  .newsletter-popup-content {
+    width: 90vw;
+    padding: 5rem 3.6rem;
+  }
+  .newsletter-input input {
+    height: 60px;
+  }
+  .newsletter-input svg {
+    bottom: -40px;
+    width: 120px !important;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .newsletter-popup-content {
+    padding: 5rem 1.6rem;
   }
 }/*# sourceMappingURL=newsletter.css.map */

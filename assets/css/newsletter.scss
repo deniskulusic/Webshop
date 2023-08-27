@@ -16,21 +16,22 @@
         -o-object-fit: cover;
         object-fit: cover;
     }
-    .newsletter{
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        box-sizing: border-box;
-        background-color: white;
-        display: flex;
-        padding: 26.98px 35.19px 26.99px 35.18px;
-        align-items: center;
-        gap: 28.81px;
-        svg{
-            width: 64.53px;
-            height: 64.54px;
-        }
-    }
+    
+}
+.newsletter-corner{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  padding: 26.98px 35.19px 26.99px 35.18px;
+  align-items: center;
+  gap: 28.81px;
+  svg{
+      width: 64.53px;
+      height: 64.54px;
+  }
 }
 h5{
     color: #000;
@@ -57,7 +58,10 @@ line-height: normal;
     height: 100vh;
     left: 0;
     top: 0;
-
+  display: none;
+}
+.newsletter-popup-active{
+  display: block;
 }
 .newsletter-popup-background{
     position: absolute;
@@ -70,12 +74,12 @@ line-height: normal;
 }
 .newsletter-popup-content{
     position: relative;
-    width: 51.944vw;
+    width: 900px;
     top: 50%;
     right: 0;
     left: 0;
     margin: 0 auto;
-    padding: 12rem 8.6rem;
+    padding: 10rem 8.6rem;
     background-color: #f1f2ed;
     transform: translateY(-50%);
     box-sizing: border-box;
@@ -129,9 +133,47 @@ line-height: normal;
         z-index: 1;
       }
 }
-
+@media only screen and (max-width: 950px) {
+  .newsletter-popup-content{
+    
+    width: 90vw;
+    
+    
+    padding: 9rem 6.6rem;
+    
+    
+}}
 @media only screen and (max-width: 650px) {
     .wallpaper{
         padding-top: 60px;
     }
+    .newsletter-popup-content{
+    
+      width: 90vw;
+      
+      
+      padding: 5rem 3.6rem;
+      
+      
+  }
+  .newsletter-input{
+    input{
+      height: 60px;
+    }
+    svg{
+      bottom: -40px;
+      width: 120px !important;
+    }
+  }
+}
+@media only screen and (max-width: 450px) {
+  .newsletter-popup-content{
+    
+   
+    
+    
+    padding: 5rem 1.6rem;
+    
+    
+}
 }
