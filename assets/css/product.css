@@ -35,9 +35,6 @@ body.naocale-active {
 .gallery.naocale-active .gallery-cell {
   width: 90%;
 }
-.gallery.naocale-active .povecalo {
-  display: none;
-}
 .gallery.naocale-active .previous {
   left: 1%;
 }
@@ -359,6 +356,10 @@ body.naocale-active {
 }
 .shop-element:hover .img-2 {
   opacity: 0;
+}
+
+.povecalo {
+  display: none;
 }
 
 .shop-element-brand {

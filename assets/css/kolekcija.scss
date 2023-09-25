@@ -323,7 +323,7 @@ line-height: 120px;
           display: flex;
           gap: 6px;
           margin-bottom: 6px;
-          width: 200%;
+          width: 300%;
           animation: bannermove 20s linear infinite;
         }
         .article2{
@@ -374,7 +374,7 @@ line-height: 120px;
           transform: translateX(0);
         }
         100% {
-          transform: translateX(-50%);
+          transform: translateX(-33.33%);
         }
       }
       @keyframes bannermove2 {
@@ -382,7 +382,7 @@ line-height: 120px;
           transform: translateX(0);
         }
         100% {
-          transform: translateX(50%);
+          transform: translateX(33.33%);
         }
       }
       .gallery-i{

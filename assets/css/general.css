@@ -262,10 +262,12 @@ nav.menu-active .menu-line {
 nav.menu-active .menu-line::before {
   transform: rotate(25deg);
   width: 100%;
+  top: 8px;
 }
 nav.menu-active .menu-line::after {
   transform: rotate(-25deg);
   width: 100%;
+  top: 8px;
 }
 
 nav .logo {
@@ -669,7 +671,7 @@ ul {
     margin-bottom: 60px;
   }
   .footer-img img {
-    width: 100px;
+    width: 90px;
     height: auto;
   }
   .footer-made {
@@ -715,7 +717,7 @@ ul {
     padding-top: 118px;
   }
   nav {
-    height: 60px;
+    height: 70px;
   }
   .logo img {
     height: 45px;

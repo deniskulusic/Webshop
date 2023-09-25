@@ -48,6 +48,10 @@ var elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
   var Item6 = document.getElementById('item6');
   var Item7 = document.getElementById('item7');
   var Item8 = document.getElementById('item8');
+  var Item204 = document.getElementById('go');
+  var Item205 = document.getElementById('go2');
+  var Item206 = document.getElementById('go3');
+  console.log(Item204)
   var Item91 = document.getElementById('item91');
   var Item92 = document.getElementById('item92');
   var Item93 = document.getElementById('item93');
@@ -87,9 +91,18 @@ var elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
     Item41.style.transform = "translateY(calc(-50% - " + 0.7*(getScroll) + "px))";
     Item5.style.transform = "translateY(-" + 0.5*(getScroll) + "px)";
     FooterText.style.transform = "translateY(-" + 0.35*(elDistanceToTop - getScroll +100 ) + "px)";
-    
+    Item204.animate({
+      transform : "translateX(" + 0.2*(Item7FromTop - getScroll - 500) + "px)"
+    },{duration:1200,fill:"forwards"})
+    Item205.animate({
+      transform : "translateX(" + 0.2*(Item7FromTop - getScroll - 500) + "px)"
+    },{duration:1200,fill:"forwards"})
+    Item206.animate({
+      transform : "translateX(" + 0.2*(Item7FromTop - getScroll - 500) + "px)"
+    },{duration:1200,fill:"forwards"})
     Move(Item6 , Item6FromTop);
     Move(Item7 , Item7FromTop);
+
     Move(Item8 , Item8FromTop);
     Move3(Item91,Item92, Item93 , Item9FromTop );
     Move3(Item101,Item102, Item103 , Item10FromTop );
@@ -129,5 +142,12 @@ var elDistanceToTop =window.pageYOffset + Footer.getBoundingClientRect().top;
       },{duration:1200,fill:"forwards"})
     }
   }
+
+
+
+  
+    
+    
+  
 
   
